@@ -1,11 +1,13 @@
 
 
+
+
 float x,y;
 int boxr,headrx,headry,paperx,papery;
 float speed;
 int text;
 float papey,boxy,texty;
-
+int oy;
 void setup(){
 size(400,400);
 
@@ -20,6 +22,7 @@ papery = 80;
 papey = 60;
 boxy = 130;
 texty = 110;
+oy = 230;
 
 }
 void draw(){
@@ -34,10 +37,13 @@ fill(#ffffff);
 line(170,175,270,175);
 fill(#5DADE2);
 rect(boxy,180,boxr,boxr);
-
+fill(255);
+text("Mevcut Oylar: "+oy,180,290);
 
 if(papey < boxy+80){
 papey++;
 texty++;
+oy = oy+1;
 }
 }
+
